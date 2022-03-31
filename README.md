@@ -73,7 +73,9 @@ Entrer le code suivant :
 ```
 @GrabResolver(name='orbisgis', root='https://nexus.orbisgis.org/repository/orbisgis/')
 @Grab(group='org.orbisgis.orbisprocess', module='geoclimate', version='1.0.0-SNAPSHOT')
+
 import org.orbisgis.orbisprocess.geoclimate.Geoclimate
+
 def process = Geoclimate.OSM.workflow
 process.execute(configurationFile:'F:/GEOCLIMATE/vitre_config_file_osm.json')
 ```
@@ -113,42 +115,42 @@ rennes_config_file_bd_topo_v2.json :
 
 ```
 {
-"description": "Processing BD Topo v2 data",
-"input": {"bdtopo_v2": {
-"folder": {
-"path": "C:/Geoclimate/BD_TOPO_35",
-"id_zones": ["35238"]
-}
-}
-},
-"output": {
-"folder": "C:/Geoclimate/output"
-},
-"parameters": {
-"rsu_indicators": {
-"indicatorUse": [
-"LCZ",
-"TEB",
-"URBAN_TYPOLOGY"
-],
-"svfSimplified": true
-},
-"grid_indicators": {
-"x_size": 100,
-"y_size": 100,
-"rowCol": false,
-"output" : "geojson",
-"indicators" :[
-"BUILDING_FRACTION",
-"BUILDING_HEIGHT",
-"WATER_FRACTION",
-"VEGETATION_FRACTION",
-"ROAD_FRACTION",
-"IMPERVIOUS_FRACTION",
-"LCZ_FRACTION"
-]
-}
-}
+  "description": "Processing BD Topo v2 data",
+  "input": {"bdtopo_v2":  {
+    "folder": {
+      "path": "C:/Geoclimate/BD_TOPO_35",
+      "id_zones": ["35238"]
+     }
+    }
+  },
+  "output": {
+    "folder": "C:/Geoclimate/output"
+   },
+   "parameters": {
+    "rsu_indicators": {
+      "indicatorUse": [
+        "LCZ",
+        "TEB",
+        "URBAN_TYPOLOGY"
+      ],
+      "svfSimplified": true
+    },
+    "grid_indicators": {
+      "x_size": 100,
+      "y_size": 100,
+      "rowCol": false,
+      "output" : "geojson",
+      "indicators" :[
+        "BUILDING_FRACTION",
+        "BUILDING_HEIGHT",
+        "WATER_FRACTION",
+        "VEGETATION_FRACTION",
+        "ROAD_FRACTION",
+        "IMPERVIOUS_FRACTION",
+        "LCZ_FRACTION"
+      ]
+    }
+  }
 }
 ```
    
@@ -164,10 +166,11 @@ Entrer le code suivant :
 ```
 @GrabResolver(name='orbisgis', root='https://nexus.orbisgis.org/repository/orbisgis/')
 @Grab(group='org.orbisgis.geoclimate', module='geoclimate', version='1.0.0-SNAPSHOT')
+
 import org.orbisgis.geoclimate.Geoclimate
+
 def process = Geoclimate.BDTopo_V2.workflow
-process.execute(configurationFile:'F:/GEOCLIMATE/GEOCLIMATE_10_2021/rennes/BD_T
-OPO_V2/rennes_config_file_bd_topo_v2.json')
+process.execute(configurationFile:'F:/GEOCLIMATE/GEOCLIMATE_10_2021/rennes/BD_TOPO_V2/rennes_config_file_bd_topo_v2.json')
 ```
 
 __'F:/GEOCLIMATE/GEOCLIMATE_10_2021/rennes/BD_TOPO_V2/rennes_config_file_bd_topo_v2.json'__ : chemin d’accès au fichier de configuration
