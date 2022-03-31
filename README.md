@@ -104,9 +104,7 @@ Pour utiliser geoclimate avec la BD TOPO il est nécessaire de sélectionner cer
 de celle-ci.  
   
 lien de téléchargement de la bd topo v2-2 : http://files.opendatarchives.fr/professionnels.ign.fr/bdtopo/  
-liste des fichiers nécessaires : https://github.com/orbisgis/geoclimate/tree/master/bdtopo_v2/src/test/resources/org/orbisgis/geoclimate/bdtopo_v2/sample_12174  
-
-La BD TOPO sur l’Ille-et-Vilaine, est dispo dans mes fichiers (BD_TOPO_35.zip). Le choix de la zone d’intéret se fait dans le fichier de configuration.
+liste des fichiers nécessaires : https://github.com/orbisgis/geoclimate/tree/master/bdtopo_v2/src/test/resources/org/orbisgis/geoclimate/bdtopo_v2/sample_12174   
 
 ## Fichier de configuration  
   
