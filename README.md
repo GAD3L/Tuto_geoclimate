@@ -86,20 +86,91 @@ __Attention__ : Bien entrer le chemin d’accès du fichier de configuration
   
 <img width="700" alt="Capture3" src="https://user-images.githubusercontent.com/85685916/161058142-39f21dc4-3064-4a5f-ab05-0a2a80f4817a.PNG">  
   
+Création automatique d’un fichier osm_zoneétude où sont les résultats.  
+  
+<img width="700" alt="Capture4" src="https://user-images.githubusercontent.com/85685916/161058503-b8e766d3-54e6-41d4-bf70-39f6440267a8.PNG">
+  
+Ci-dessus, les couches en sortie de geoclimate. On peut ensuite les mettre sous QGIS. Ici, le fichier rsu_lcz.geojson.
+  
+<img width="700" alt="Capture5" src="https://user-images.githubusercontent.com/85685916/161058723-ad806d72-8679-4a90-aca1-9750b93e8eee.PNG">
+  
+Pour la typologie voir : https://github.com/orbisgis/geoclimate/wiki/LCZ-classification
 
+## BD TOPO
+  
+Pour utiliser geoclimate avec la BD TOPO il est nécessaire de sélectionner certains fichiers
+de celle-ci.  
+  
+lien de téléchargement de la bd topo v2-2 : http://files.opendatarchives.fr/professionnels.ign.fr/bdtopo/  
+liste des fichiers nécessaires : https://github.com/orbisgis/geoclimate/tree/master/bdtopo_v2/src/test/resources/org/orbisgis/geoclimate/bdtopo_v2/sample_12174  
 
+La BD TOPO sur l’Ille-et-Vilaine, est dispo dans mes fichiers (BD_TOPO_35.zip). Le choix de la zone d’intéret se fait dans le fichier de configuration.
 
+## Fichier de configuration  
+  
+Copier le script ci-dessous dans un bloc note. Et l’enregistrer en .json. Ici il se nomme
+rennes_config_file_bd_topo_v2.json :  
 
+```
+{
+"description": "Processing BD Topo v2 data",
+"input": {"bdtopo_v2": {
+"folder": {
+"path": "C:/Geoclimate/BD_TOPO_35",
+"id_zones": ["35238"]
+}
+}
+},
+"output": {
+"folder": "C:/Geoclimate/output"
+},
+"parameters": {
+"rsu_indicators": {
+"indicatorUse": [
+"LCZ",
+"TEB",
+"URBAN_TYPOLOGY"
+],
+"svfSimplified": true
+},
+"grid_indicators": {
+"x_size": 100,
+"y_size": 100,
+"rowCol": false,
+"output" : "geojson",
+"indicators" :[
+"BUILDING_FRACTION",
+"BUILDING_HEIGHT",
+"WATER_FRACTION",
+"VEGETATION_FRACTION",
+"ROAD_FRACTION",
+"IMPERVIOUS_FRACTION",
+"LCZ_FRACTION"
+]
+}
+}
+}
+```
+   
+__"C:/Geoclimate/BD_TOPO_35"__ : chemin d’accès de la BD_TOPO_35  
+__"id_zones": ["35238"]__ : code INSEE de Rennes (possible de mettre plusieurs codes INSEE
+ou de faire une bounding box)  
+__C:/Geoclimate/output__ : chemin d’accès où s’enregistre les fichiers de sortie
+  
+### Lancer la console Groovy 
+  
+Entrer le code suivant :   
+   
+```
+@GrabResolver(name='orbisgis', root='https://nexus.orbisgis.org/repository/orbisgis/')
+@Grab(group='org.orbisgis.geoclimate', module='geoclimate', version='1.0.0-SNAPSHOT')
+import org.orbisgis.geoclimate.Geoclimate
+def process = Geoclimate.BDTopo_V2.workflow
+process.execute(configurationFile:'F:/GEOCLIMATE/GEOCLIMATE_10_2021/rennes/BD_T
+OPO_V2/rennes_config_file_bd_topo_v2.json')
+```
 
-
-
-
-
-
-
-
-
-
+__'F:/GEOCLIMATE/GEOCLIMATE_10_2021/rennes/BD_TOPO_V2/rennes_config_file_bd_topo_v2.json'__ : chemin d’accès au fichier de configuration
 
 
 
