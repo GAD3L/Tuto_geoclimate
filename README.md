@@ -179,23 +179,12 @@ __'F:/GEOCLIMATE/GEOCLIMATE_10_2021/rennes/BD_TOPO_V2/rennes_config_file_bd_topo
 <img width="700" alt="Capture7" src="https://user-images.githubusercontent.com/85685916/161060794-67ca42f3-b234-47af-a9ee-754a2ca7c96e.PNG">
   
 ## Comparaison des résultats avec en input Open Street Map et la BD TOPO
-  
-<img width="699" alt="Capture8" src="https://user-images.githubusercontent.com/85685916/161061002-08cac15f-0c43-46c0-931e-7ed8cb7b7524.PNG">
+    
+<img width="700" alt="Capture8" src="https://user-images.githubusercontent.com/85685916/161062341-153af6b3-2af1-45c7-ace0-2b06e1f0c270.PNG">
   
 <img width="700" alt="Capture9" src="https://user-images.githubusercontent.com/85685916/161061069-4cdb1256-e392-4a0e-8134-9e4c76b970a2.PNG">
   
 ## Crédits 
   
 Geoclimate : https://github.com/orbisgis/geoclimate  
-
-
-
-
-
-
-
-
-
-
-
 
