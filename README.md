@@ -33,31 +33,31 @@ vitre_config_file_osm.json. (penser à adapter le nom de la ville et les fichier
 
 ```
 {
-"description": "Processing OSM data",
-"geoclimatedb": {
-"folder": "F:/GEOCLIMATE",
-"name": "geoclimate_db_test;AUTO_SERVER=TRUE",
-"delete": true
-},
-"input": {
-"osm": [
-"Vitré"
-]
-},
-"output": {
-"folder": "F:/GEOCLIMATE/output"
-},
-"parameters": {
-"rsu_indicators": {
-"indicatorUse": [
-"LCZ",
-"TEB",
-"URBAN_TYPOLOGY"
-],
-"svfSimplified": true,
-"estimateHeight": true
-}
-}
+  "description": "Processing OSM data",
+  "geoclimatedb": {
+    "folder": "F:/GEOCLIMATE",
+    "name": "geoclimate_db_test;AUTO_SERVER=TRUE",
+  "delete": true
+  },
+  "input": {
+  "osm": [
+    "Vitré"
+  ]
+  },
+  "output": {
+    "folder": "F:/GEOCLIMATE/output"
+  },
+  "parameters": {
+    "rsu_indicators": {
+      "indicatorUse": [
+        "LCZ",
+        "TEB",
+        "URBAN_TYPOLOGY"
+       ],
+      "svfSimplified": true,
+      "estimateHeight": true
+     }
+   }
 }
 ```
 
