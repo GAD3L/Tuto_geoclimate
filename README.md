@@ -24,27 +24,28 @@ https://groovy.jfrog.io/artifactory/dist-release-local/groovy-windows-installer/
 
 ### Fichier de configuration 
 Ici on utilise les données Open Street Map en entrée.  
+  
 __Attention__: au folder en output : ici “F:/GEOCLIMATE/output”, il faut créer le répertoire avant
 “output” avant de faire tourner le code.   
+  
 Copier le script ci-dessous dans un bloc note. Et l’enregistrer en .json. Ici il se nomme
-vitre_config_file_osm.json. (en gras: à changer en fonction de la ville d’étude et fichier de
-sortie)  
+vitre_config_file_osm.json. (penser à adapter le nom de la ville et les fichiers)
 
 ```
 {
 "description": "Processing OSM data",
 "geoclimatedb": {
-"folder": __"F:/GEOCLIMATE"__,
+"folder": "F:/GEOCLIMATE",
 "name": "geoclimate_db_test;AUTO_SERVER=TRUE",
 "delete": true
 },
 "input": {
 "osm": [
-__"Vitré"__
+"Vitré"
 ]
 },
 "output": {
-"folder": __"F:/GEOCLIMATE/output"__
+"folder": "F:/GEOCLIMATE/output"
 },
 "parameters": {
 "rsu_indicators": {
