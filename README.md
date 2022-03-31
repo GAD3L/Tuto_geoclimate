@@ -61,3 +61,49 @@ vitre_config_file_osm.json. (penser à adapter le nom de la ville et les fichier
 }
 ```
 
+### Lancer la console Groovy
+  
+<img width="700" alt="Capture1" src="https://user-images.githubusercontent.com/85685916/161057702-1135503e-0a89-4654-8259-2c878c4e390e.PNG">
+  
+__Attention__ : Bien vérifier en bas à droite la version de Groovy : 3.0.7 sinon geoclimate ne
+fonctionne pas.  
+  
+Entrer le code suivant :  
+  
+```
+@GrabResolver(name='orbisgis', root='https://nexus.orbisgis.org/repository/orbisgis/')
+@Grab(group='org.orbisgis.orbisprocess', module='geoclimate', version='1.0.0-SNAPSHOT')
+import org.orbisgis.orbisprocess.geoclimate.Geoclimate
+def process = Geoclimate.OSM.workflow
+process.execute(configurationFile:'F:/GEOCLIMATE/vitre_config_file_osm.json')
+```
+  
+__Attention__ : Bien entrer le chemin d’accès du fichier de configuration
+  
+<img width="700" alt="Capture2" src="https://user-images.githubusercontent.com/85685916/161057981-8dcf15d2-f30b-4d81-9e61-7a57406fe048.PNG">
+  
+### Résultats
+  
+<img width="700" alt="Capture3" src="https://user-images.githubusercontent.com/85685916/161058142-39f21dc4-3064-4a5f-ab05-0a2a80f4817a.PNG">  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
