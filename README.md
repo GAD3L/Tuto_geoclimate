@@ -30,7 +30,7 @@ Copier le script ci-dessous dans un bloc note. Et l’enregistrer en .json. Ici 
 vitre_config_file_osm.json. (en gras: à changer en fonction de la ville d’étude et fichier de
 sortie)  
 
-'''
+```
 {
 "description": "Processing OSM data",
 "geoclimatedb": {
@@ -58,5 +58,5 @@ sortie)
 }
 }
 }
-'''
+```
 
